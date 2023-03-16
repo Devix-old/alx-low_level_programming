@@ -1,2 +1,2 @@
 //WELCOME 
-THIS IS alx-low_level_programming REPO
+THIS IS 0x00. C - Hello, World directory
