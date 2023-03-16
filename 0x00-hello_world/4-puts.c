@@ -1,5 +1,6 @@
 #include <stdio.h>
 /*initial description*/
+/*This function is the entry*/
 int main(void)
 	/*main description*/
 {
