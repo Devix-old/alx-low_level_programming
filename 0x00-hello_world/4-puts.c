@@ -1,5 +1,6 @@
 #include <stdio.h>
 /*initial description*/
+/*main description*/
 int main(void)
 	/*main description*/
 {
