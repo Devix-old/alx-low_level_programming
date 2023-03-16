@@ -1,11 +1,10 @@
 #include <stdio.h>
-/*initial description*/
-/*This function is the entry*/
+/**
+ *main - A program that prints a sentence in the display
+ * Return 0 (Success)
+ */
 int main(void)
-	/*main description*/
 {
-	/*display this on screen*/
 	puts("\"Programming is like building a multilingual puzzle");
-	/*return 0 */
 	return (0);
 }
