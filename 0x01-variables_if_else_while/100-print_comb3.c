@@ -21,8 +21,11 @@ if ((i + '0') != (y + '0'))
 {
 putchar(i + '0');
 putchar(y + '0');
+if (i<9)
+{
 putchar (',');
 putchar (' ');
+}
 }
 }
 x = x + 1;
