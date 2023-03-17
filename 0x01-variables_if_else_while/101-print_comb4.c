@@ -35,6 +35,7 @@ for (i = 0; i < 10; i++)
 }
 }
 }
+putchar('\n');
 return (0);
-return (0);
+
 }
