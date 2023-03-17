@@ -10,7 +10,6 @@
  */
 int main(void)
 {
-char str[] = "0123456789";
 int i = 0;
 for (i = 0 ; i < 10 ; i++)
 {
