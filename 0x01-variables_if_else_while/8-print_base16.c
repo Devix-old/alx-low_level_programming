@@ -4,7 +4,7 @@
 #include <stdio.h>
 /* betty style doc for function main goes there*/
 /**
- * main - prints all the numbers of base 16 in lowercase, followed by a new line.
+ * main - prints all the numbers of base 16 in lowercase.
  *
  * Return: Always 0 (Success)
  */
@@ -15,7 +15,8 @@ for (i = 0 ; i < 10 ; i++)
 {
 putchar(i + '0');
 }
-for (i = 0 ; i < 6 ; i++){
+for (i = 0 ; i < 6 ; i++)
+{
 putchar (i + 'a');
 }
 putchar('\n');
