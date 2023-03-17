@@ -2,8 +2,11 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there
- * this main function print whether the number is positive or negative
+/* betty style doc for function main goes there*/
+/**
+ * main - Positive and negative number
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
