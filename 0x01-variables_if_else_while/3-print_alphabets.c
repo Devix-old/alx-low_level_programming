@@ -11,8 +11,8 @@
 int main(void)
 {
 char str[] = "abcdefghijklmnopqrstuvwxyz";
-char STR[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-int i;
+char STR[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int i = 0;
 for (i = 0 ; i < 26 ; i++)
 {
 putchar (str[i]);
