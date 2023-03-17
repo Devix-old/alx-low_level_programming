@@ -10,6 +10,11 @@
  */
 int main(void)
 {
-putchar ("abcdefghijklmnopqrstuvwxyz");
+char str[] = "abcdefghijklmnopqrstuvwxyz";
+for (int i = 0 ; i < 26 ; i++)
+{
+putchar (str[i]);
+}
 	return (0);
+
 }
