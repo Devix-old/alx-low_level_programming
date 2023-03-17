@@ -16,6 +16,7 @@ for (i = 0 ; i < 26 ; i++)
 {
 putchar (str[i]);
 }
+putchar("\n")
 	return (0);
 
 }
