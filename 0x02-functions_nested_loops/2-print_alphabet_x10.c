@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - prints all lowercase letters of the alphabet to the console
+ * print_alphabet_x10 - prints all lowercase
+ *letters of the alphabet to the console
  *
  * Description: This function iterates through each letter of the alphabet
  * ten times.
