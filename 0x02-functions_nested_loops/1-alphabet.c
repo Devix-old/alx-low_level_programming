@@ -1,10 +1,11 @@
 #include "main.h"
-/* more headers goes there */
-/* betty style doc for function main goes there*/
 /**
- * main - prints all alphabet in lower case
+ * print_alphabet - prints all lowercase letters of the alphabet to the console
  *
- * Return: Always 0 (Success)
+ * Description:loop to iterate through each letter of
+ * the alphabet in lowercase and prints them to the console
+ *
+ * Return: void
  */
 void print_alphabet(void)
 {
