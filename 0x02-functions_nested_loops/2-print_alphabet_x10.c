@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_alphabet - prints all lowercase and uppercase letter
+ * print_alphabet - prints all lowercase letters of the alphabet to the console
  *
- * Description:loop bla bla bla
- * bla bla bla bla
+ * Description: This functionate through each letter of
+ * the alphabet in lowercase and prints them to the con
  *
  * Return: void
  */
