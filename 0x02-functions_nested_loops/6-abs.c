@@ -1,15 +1,15 @@
-#include <unistd.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there*/
+#include "main.h"
 /**
- * main - prints all alphabet in lower case x 10.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+* _abs - Computes the absolute value of an integer.
+* @r: The integer value to be checked.
+* Return: The absolute value of the input integer.
+*/
+int _abs(int r)
 {
-	int _abs(int r){
-		return (r*-1);
-	}
+if (r > 0)
+return (r);
+else
+return (r * -1)
+}
+return (0);
 }
