@@ -21,5 +21,6 @@ while (i < 123)
 _putchar('\n');
 
 }
+print_alphabet();
 return (0);
 }
