@@ -1,7 +1,5 @@
-#include <unistd.h>
 #include "main.h"
 /* more headers goes there */
-#include <stdio.h>
 /* betty style doc for function main goes there*/
 /**
  * main - prints all alphabet in lower case
@@ -12,15 +10,4 @@ int main(void)
 {
 print_alphabet();
 return (0);
-}
-void print_alphabet(void)
-{
-int i = 97;
-while (i < 123)
-{
-	_putchar(i);
-	i++;
-}
-_putchar('\n');
-
 }
