@@ -1,16 +1,15 @@
+#include "main.h"
+#include <stdio.h>
 /* more headers goes there */
 /* betty style doc for function main goes there*/
 /**
- * main - prints all alphabet in lower case x 10.
- *
- * Return: Always 0 (Success)
- */
-int main() {
-    
+ * This fuction return 1 if the input is lower 
+ * and return 0 if it is not
+ * Return: 1 or 0
+ */  
 int is_lower(int c){
     if (c >= 'a' && c <= 'z')
-        putchar('1');
+    	return(1);
     else
-        putchar('0');
-}
+    	return(0);
 }
