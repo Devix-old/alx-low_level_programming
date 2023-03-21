@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "main.h"
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there*/
@@ -7,13 +8,9 @@
  *
  * Return: Always 0 (Success)
  */
-int main(){
-
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
-}
-int print_alphabet()
+void print_alphabet(void)
 {
 int i = 97;
 while (i < 123)
@@ -21,8 +18,8 @@ while (i < 123)
 	_putchar(i);
 	i++;
 }
-}
-print_alphabet();
 _putchar('\n');
-	return(0);
+
+}
+return (0);
 }
