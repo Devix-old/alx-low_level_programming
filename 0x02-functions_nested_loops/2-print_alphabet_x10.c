@@ -3,7 +3,7 @@
  * print_alphabet - prints all lowercase letters of the alphabet to the console
  *
  * Description: This functionate through each letter of
- * the alphabet in lowercase and prints them to the con
+ * print_alphabet_x10
  *
  * Return: void
  */
