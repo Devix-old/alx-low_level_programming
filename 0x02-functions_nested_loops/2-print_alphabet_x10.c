@@ -1,32 +1,25 @@
-#include <unistd.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there*/
+#include "main.h"
 /**
- * main - prints all alphabet in lower case x 10.
+ * print_alphabet - prints all lowercase and uppercase letter
  *
- * Return: Always 0 (Success)
+ * Description:loop bla bla bla
+ * bla bla bla bla
+ *
+ * Return: void
  */
-int main(void)
-{
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-int print_alphabet()
+void print_alphabet_x10(void)
 {
 int i = 97;
+int counter = 0;
+while (counter < 10)
+{
 while (i < 123)
 {
 _putchar(i);
 i++;
 }
-}
-int y = 0;
-for (y = 0; y <= 9 ; y++)
-{
-print_alphabet();
 _putchar('\n');
+i = 97;
+counter++;
 }
-return (0);
 }
