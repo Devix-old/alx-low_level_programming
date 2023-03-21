@@ -19,7 +19,8 @@ while (i < 123)
 _putchar('\n');
 
 }
+int main(void)
+{
 print_alphabet();
-int main(void){
 return (0);
 }
