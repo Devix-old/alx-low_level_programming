@@ -1,15 +1,16 @@
-#include <unistd.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there*/
+#include "main.h"
 /**
- * main - prints all alphabet in lower case x 10.
- *
- * Return: Always 0 (Success)
- */
+* print_last_digit - print last digit of a number
+* @r: The number value to be checked.
+* Return: The last digit
+*/
 int main(void)
 {
-int print_last_digit(int r){
-	return (r%10)
-}
+int r;
+print_last_digit(98);
+print_last_digit(0);
+r = print_last_digit(-1024);
+_putchar('0' + r);
+_putchar('\n');
+return (0);
 }
