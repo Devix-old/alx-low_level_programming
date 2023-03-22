@@ -1,14 +1,19 @@
 #include "main.h"
-int print_last_digit(int r)
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-int res;
-if(r >= 0){
-res = (r % 10) + 48;
-_putchar(res);
-return(res);
+    int r;
+
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar('0' + r);
+    _putchar('\n');
+    return (0);
 }
-r = r*-1;
-res = (r % 10);
-_putchar(res + 48);
-return (res);
-}
+
