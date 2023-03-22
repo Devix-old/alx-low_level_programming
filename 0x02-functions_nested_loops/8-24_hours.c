@@ -12,16 +12,15 @@ while (y < 24)
 {
 while (x < 60)
 {
-putchar(y / 10 + '0');
-putchar(y % 10 + '0');
-putchar(':');
-putchar(x / 10 + '0');
-putchar(x % 10 + '0');
-putchar('\n');
+_putchar(y / 10 + '0');
+_putchar(y % 10 + '0');
+_putchar(':');
+_putchar(x / 10 + '0');
+_putchar(x % 10 + '0');
+_putchar('\n');
 x++;
 }
 x = 0;
 y++;
 }
-return (0);
 }
