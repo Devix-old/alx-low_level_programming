@@ -1,7 +1,6 @@
 #include "main.h"
 /**
 * jack_bauer - print 24 hours with seconds and minutes
-* @r: The integer value to be checked.
 * Return: return 0
 */
 void jack_bauer(void)
