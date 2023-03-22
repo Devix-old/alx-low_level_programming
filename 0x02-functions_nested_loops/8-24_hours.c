@@ -7,11 +7,10 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-    int x=0;
-    int y=0;
+
 void jack_bauer(void){
+	int x=0;
+	int y=0;
 while(y<24){
     while (x<60){
         putchar(y/10+'0');
@@ -25,7 +24,6 @@ while(y<24){
     }
     x=0;
     y++;
-}
 }
 return(0);
 }
