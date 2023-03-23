@@ -35,7 +35,6 @@ void print_remaining_days(int month, int day, int year)
         }
     }
 }
-With this fix in place, the program should now correctly handle all dates, including leap years.
 
 
 
