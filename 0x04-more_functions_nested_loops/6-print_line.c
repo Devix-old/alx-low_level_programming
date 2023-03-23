@@ -1,6 +1,21 @@
 include "main.h"
 /**
- * _isupper - checks if a character is uppercase
- * @c: the character to be checked
- * Return: 1 if @c is uppercase, 0 otherwise
+ * print_line - draws a straight line in the terminal
+ * @n: number of straight
  */
+void print_line(int n)
+{
+int i;
+for (i = 0; i < n; i++)
+{
+if (n <= 0)
+{
+_putchar('\n');
+}
+else
+{
+_putchar('_');
+}
+_putchar('\n');
+}
+}
