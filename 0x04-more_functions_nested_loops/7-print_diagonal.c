@@ -21,6 +21,5 @@ for (y = 0; y <= i; y++)
 _putchar(' ');
 }
 }
-_putchar('\n');
 }
 }
