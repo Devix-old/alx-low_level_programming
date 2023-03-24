@@ -1,47 +1,30 @@
-#include "main.h"
 #include <stdio.h>
+
 /**
- * main - checks if a character is uppercase
- * Return: 1 if @c is uppercase, 0 otherwise
+ * main - Entry pois numbers from 1 to 100, replacing multiples of 3
+ *        with Fizz, multiplnd multiples of both with FizzBuzz
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int i;
-for (i = 1; i <= 100; i++)
-{
-if (i % 3 == 0 && i % 5 == 0)
-{
-putchar('F');
-putchar('i');
-putchar('z');
-putchar('z');
-putchar('B');
-putchar('u');
-putchar('z');
-putchar('z');
-putchar(' ');
-}
-else if (i % 3 == 0)
-{
-putchar('F');
-putchar('i');
-putchar('z');
-putchar('z');
-putchar(' ');
-}
-else if (i % 5 == 0)
-{
-putchar('B');
-putchar('u');
-putchar('z');
-putchar('z');
-putchar(' ');
-}
-else
-{
-printf("%d ", i);
-}
-}
-putchar('\n');
-return (0);
+	int i;
+
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
+
+		if (i < 100)
+			putchar(' ');
+	}
+
+	putchar('\n');
+
+	return (0);
 }
