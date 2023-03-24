@@ -12,14 +12,15 @@ _putchar('\n');
 }
 else
 {
+
 for (i = 0; i < n; i++)
 {
-_putchar('\\');
-_putchar('\n');
-for (y = 0; y <= i; y++)
+for (y = 0; y < i; y++)
 {
 _putchar(' ');
 }
+_putchar('\\');
+_putchar('\n');
 }
 }
 }
