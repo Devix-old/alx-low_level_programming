@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _isupper - checks if a character is uppercase
- * @c: the character to be checked
+ * main - checks if a character is uppercase
  * Return: 1 if @c is uppercase, 0 otherwise
  */
-int main(void) {
+int main(void)
+{
 int i;
 for (i = 1; i <= 100; i++)
 {
