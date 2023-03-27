@@ -3,7 +3,7 @@
  * @a: pointer to the first integer
  * @b: pointer to the second integer
  *
- * Return: void
+ * Returns: void
  */
 void swap_int(int *a, int *b)
 {
