@@ -14,8 +14,5 @@ putchar(str[i]);
 i++;
 x = str[i];
 }
-if (str[0] != 0)
-{
 putchar('\n');
-}
 }
