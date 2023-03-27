@@ -13,4 +13,5 @@ for (i = len / 2; i < len; i++)
 {
 putchar(str[i]);
 }
+putchar('\n');
 }
