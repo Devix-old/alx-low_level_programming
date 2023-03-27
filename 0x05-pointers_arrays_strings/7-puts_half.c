@@ -20,5 +20,6 @@ for (i = start; i < len; i++)
 {
 putchar(str[i]);
 }
+putchar('\n');
 }
 
