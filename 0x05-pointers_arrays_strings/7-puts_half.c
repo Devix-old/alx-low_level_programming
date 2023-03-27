@@ -7,11 +7,18 @@
  */
 void puts_half(char *str)
 {
-int i, len;
+int i, len, start;
 len = strlen(str);
-for (i = (len - 1) / 2; i < len; i++)
+if (len % 2 == 0)
+{
+start = len / 2;
+}
+else{
+start = (len + 1) / 2;
+}
+for (i = start; i < len; i++)
 {
 putchar(str[i]);
 }
-putchar('\n');
 }
+
