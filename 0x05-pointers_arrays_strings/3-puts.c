@@ -11,8 +11,8 @@ int x = 100;
 while (x != 0)
 {
 putchar(str[i]);
-i++;
 x = str[i];
+i++;
 }
 putchar('\n');
 }
