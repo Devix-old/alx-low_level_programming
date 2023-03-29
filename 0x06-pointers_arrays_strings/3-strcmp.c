@@ -9,13 +9,17 @@
  */
 int _strcmp(char *s1, char *s2)
 {
+int i = 0;
+int len_s1 = strlen(s1);
+int len_s2 = strlen(s2);
 int s1_count = 0, s2_count = 0;
-for (int i = 0; i < strlen(s1); i++){
+int result;
+for (i = 0; i < len_s1; i++){
 s1_count += (int) s1[i];
 }
-for (int i = 0; i < strlen(s2); i++){
+for (i = 0; i < len_s2; i++){
 s2_count += (int) s2[i];
 }
-int result = s1_count - s2_count;
+result = s1_count - s2_count;
 return (result > 0 ? 15 :result<0 ? -15 :0);
 }
