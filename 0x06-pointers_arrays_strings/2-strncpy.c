@@ -9,6 +9,7 @@
  *
  * Return: a pointer to the destination string
  */
+}
 char *_strncpy(char *dest, char *src, int n)
 {
 int i, len_d, len_s;
@@ -19,6 +20,8 @@ for (i = 0; i <= n - 1 && src[i] != '\0'; i++)
 {
 dest[i] = src[i];
 }
+for (; i < n; i ++){
 dest[i] = '\0';
+}
 return (dest);
 }
