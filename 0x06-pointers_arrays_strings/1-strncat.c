@@ -19,6 +19,6 @@ for (i = len_d, j = 0; i <= len_n && src[j] != '\0'; i++, j++)
 {
 dest[i] = src[j];
 }
-dest[len_n] = '\0';
+dest[i] = '\0';
 return (dest);
 }
