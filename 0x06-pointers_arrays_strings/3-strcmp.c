@@ -23,5 +23,5 @@ for (i = 0; i < len_s2; i++)
 s2_count += (int) s2[i];
 }
 result = s1_count - s2_count;
-return (result > 0 ? 15 : result < 0 ? -15 : 0);
+return ((char) result);
 }
