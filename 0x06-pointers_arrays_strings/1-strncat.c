@@ -12,7 +12,6 @@ char *_strncat(char *dest, char *src, int n)
 {
 int i;
 int j;
-int len_s = strlen(src);
 int len_d = strlen(dest);
 int len_n = len_d + n;
 for (i = len_d, j = 0; i <= len_n && src[j] != '\0'; i++, j++)
