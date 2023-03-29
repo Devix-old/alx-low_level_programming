@@ -34,6 +34,7 @@ ptr--;
 }
 ptr++;
 }
+ptr[i] = '\0';
 return (str);
 }
 
