@@ -9,12 +9,10 @@
  *
  * Return: a pointer to the destination string
  */
-}
 char *_strncpy(char *dest, char *src, int n)
 {
-int i, len_s;
+int i;
 i = 0;
-len_s = strlen(src);
 for (i = 0; i <= n - 1 && src[i] != '\0'; i++)
 {
 dest[i] = src[i];
