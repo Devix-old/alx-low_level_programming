@@ -14,12 +14,14 @@ int len_s1 = strlen(s1);
 int len_s2 = strlen(s2);
 int s1_count = 0, s2_count = 0;
 int result;
-for (i = 0; i < len_s1; i++){
+for (i = 0; i < len_s1; i++)
+{
 s1_count += (int) s1[i];
 }
-for (i = 0; i < len_s2; i++){
+for (i = 0; i < len_s2; i++)
+{
 s2_count += (int) s2[i];
 }
 result = s1_count - s2_count;
-return (result > 0 ? 15 :result<0 ? -15 :0);
+return (result > 0 ? 15 : result < 0 ? -15 : 0);
 }
