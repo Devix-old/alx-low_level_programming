@@ -6,35 +6,22 @@
  *
  * Return: pointer to the capitalized string
  */
-
 char *cap_string(char *str)
 {
-int len_str = strlen(str);
-char *ptr = str;
 int i;
-for (i = 0; i < len_str; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
-if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' ||
-*ptr == ';' || *ptr == '.' || *ptr == '"' || *ptr == '(' ||
-*ptr == ')' || *ptr == '{' || *ptr == '}')
+if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' ||
+str[i - 1] == '\n' || str[i - 1] == ',' || str[i - 1] == ';' ||
+str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?' ||
+str[i - 1] == '"' || str[i - 1] == '(' || str[i - 1] == ')' ||
+str[i - 1] == '{' || str[i - 1] == '}')
 {
-if (*ptr == '\t')
+if (str[i] >= 'a' && str[i] <= 'z')
 {
-*ptr = ' ';
-}
-ptr++;
-if (*ptr >= 'a' && *ptr <= 'z')
-{
-*ptr -= 32;
-}
-else
-{
-ptr--;
+str[i] -= 32;
 }
 }
-ptr++;
 }
-ptr[i] = '\0';
-return (str);
+return str;
 }
-
