@@ -26,11 +26,12 @@ for (i = 0; i < final_len; i++)
 if (s1[i] != s2[i])
 {
 result = (int) s1[i] - (int) s2[i];
-return (result);
+break;
 }
 else
 {
-return (0);
+result = 0;
 }
 }
+return (result);
 }
