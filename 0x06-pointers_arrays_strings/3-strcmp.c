@@ -9,12 +9,10 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i, s1_counter, s2_counter, result;
+int i, result;
 int len_s1 = strlen(s1);
 int len_s2 = strlen(s2);
 int final_len;
-s2_counter = 0;
-s1_counter = 0;
 if (len_s1 > len_s2)
 {
 final_len = len_s1;
