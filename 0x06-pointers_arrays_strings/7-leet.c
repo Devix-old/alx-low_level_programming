@@ -7,7 +7,6 @@
  *
  * Return: A pointer to the encoded string.
  */
-Expect the best. Prepare for the worst. Capitalize on what comes.
 char *leet(char *str)
 {
 char *ptr = str;
