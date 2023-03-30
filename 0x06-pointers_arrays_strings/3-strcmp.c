@@ -9,11 +9,11 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i, y, s1_counter, s2_counter, result;
+int i, y, s1_counter, s2_counter, result, len_s1, len_s2;;
 s2_counter = 0;
 s1_counter = 0;
-int len_s1 = strlen(s1);
-int len_s2 = strlen(s2);
+len_s1 = strlen(s1);
+len_s2 = strlen(s2);
 for (i = 0; i < len_s1; i++)
 {
 for (y = 0; y < len_s2; y++)
@@ -30,4 +30,4 @@ s2_counter += 1;
 }
 result = s1_counter - s2_counter;
 return (result);
-}i
+}
