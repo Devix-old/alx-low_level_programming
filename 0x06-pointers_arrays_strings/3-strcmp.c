@@ -9,7 +9,8 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i, y, s1_counter, s2_counter, result, len_s1, len_s2;;
+int i, y, s1_counter, s2_counter,
+result, len_s1, len_s2;
 s2_counter = 0;
 s1_counter = 0;
 len_s1 = strlen(s1);
