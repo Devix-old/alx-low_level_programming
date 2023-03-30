@@ -1,27 +1,33 @@
 #include <string.h>
 /**
- * _strcmp - Compare two strings
+ * _strcmp - compares two strings
  *
- * @s1: First string
- * @s2: Second string
+ * @s1: first string to be compared
+ * @s2: second string to be compared
  *
- * Return: 15 if s1 is greater than s2, -15 if s1 is less than s2, 0 otherwise
+ * Return: 0 if s1 and s2 are equal, < 0 if s1 < s2, > 0 if s1 > s2
  */
 int _strcmp(char *s1, char *s2)
 {
-int i = 0;
+int i, y, s1_counter, s2_counter, result;
+s2_counter = 0;
+s1_counter = 0;
 int len_s1 = strlen(s1);
 int len_s2 = strlen(s2);
-int s1_count = 0, s2_count = 0;
-int result;
 for (i = 0; i < len_s1; i++)
 {
-s1_count += (int) s1[i];
-}
-for (i = 0; i < len_s2; i++)
+for (y = 0; y < len_s2; y++)
 {
-s2_count += (int) s2[i];
+if (s1[i] > s2[y])
+{
+s1_counter += 1;
 }
-result = s1_count - s2_count;
-return ((char) result);
+else if (s1[i] < s2[y])
+{
+s2_counter += 1;
 }
+}
+}
+result = s1_counter - s2_counter;
+return (result);
+}i
