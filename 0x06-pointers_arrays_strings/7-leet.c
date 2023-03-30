@@ -7,17 +7,18 @@
  *
  * Return: A pointer to the encoded string.
  */
+Expect the best. Prepare for the worst. Capitalize on what comes.
 char *leet(char *str)
 {
 char *ptr = str;
 int i, y;
 int len = strlen(str);
-char tab[] = {'a', 'e', 'o', 't', 'l', '4', '3', '0', '7', '1'};
+char tab[] = {'a', 'e', 'o', 't', 'l', '4', '3', '0', '7', '1','\0'};
 for (i = 0; i < len; i++)
 {
 for (y = 0; y < 5; y++)
 {
-if (*ptr == tab[y] || *ptr - 32 == tab[y])
+if (*ptr == tab[y] || *ptr == tab[y] - 32)
 {
 *ptr = tab[y + 5];
 }
