@@ -9,26 +9,30 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i, y, s1_counter, s2_counter,
-result, len_s1, len_s2;
+int i, s1_counter, s2_counter, result;
+int len_s1 = strlen(s1);
+int len_s2 = strlen(s2);
+int final_len;
 s2_counter = 0;
 s1_counter = 0;
-len_s1 = strlen(s1);
-len_s2 = strlen(s2);
-for (i = 0; i < len_s1; i++)
+if (len_s1 > len_s2)
 {
-for (y = 0; y < len_s2; y++)
+final_len = len_s1;
+}
+else
 {
-if (s1[i] > s2[y])
+final_len = len_s2;
+}
+for (i = 0; i < final_len; i++)
 {
-s1_counter += 1;
-}
-else if (s1[i] < s2[y])
+if (s1[i] != s2[i])
 {
-s2_counter += 1;
-}
-}
-}
-result = s1_counter - s2_counter;
+result = (int) s1[i] - (int) s2[i];
 return (result);
+}
+else
+{
+return (0);
+}
+}
 }
