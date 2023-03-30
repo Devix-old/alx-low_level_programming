@@ -12,8 +12,8 @@ char *rot13(char *str)
 {
 char *ptr = str;
 int i, y, len;
-char alpha[] = {'a', 'b', 'c', 'd', 'e', '
-f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+char alpha[] = {'a', 'b', 'c', 'd', 'e', 'f',
+'g', 'h', 'i', 'j', 'k', 'l', 'm',
 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
