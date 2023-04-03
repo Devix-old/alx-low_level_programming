@@ -9,6 +9,10 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
+if (needle_len == 0)
+{
+return haystack;
+}
 int i, j;
 int len_haystack = strlen(haystack);
 int len_needle = strlen(needle);
