@@ -1,7 +1,9 @@
 #include <stdio.h>
-/*
- * print_chessboard - represented as a 2D array of characters
- * @a: pointer to the 2D array
+/**
+ * print_chessboard - prints the chessboard
+ * @a: pointer to 2D array of char
+ *
+ * Return: void
  */
 void print_chessboard(char (*a)[8])
 {
