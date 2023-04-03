@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-print_diagsums(int *a, int size){
+void print_diagsums(int *a, int size)
 {
 int sum1 = 0, sum2 = 0, i, y;
 for (i = 0, y = size - 1; i < size; i++, y--)
@@ -15,6 +15,7 @@ for (i = 0, y = size - 1; i < size; i++, y--)
 sum1 = *(a + size * i + i) + sum1;
 sum2 = *(a + size * i + y) + sum2;
 }
-printf("%d ", sum1);
+printf("%d, ", sum1);
 printf("%d", sum2);
+printf("\n");
 }
