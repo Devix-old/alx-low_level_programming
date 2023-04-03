@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * diagonal_sum - calculates the sum of the diagonal elements in a square matrix
+ * print_diagsums - sum the diagonal elements in a square matrix
  * @a: pointer to the first element of the matrix
  * @size: size of the matrix
  *
