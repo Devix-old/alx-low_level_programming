@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-void diagonal_sum(int *a, int size)
+print_diagsums(int *a, int size){
 {
 int sum1 = 0, sum2 = 0, i, y;
 for (i = 0, y = size - 1; i < size; i++, y--)
