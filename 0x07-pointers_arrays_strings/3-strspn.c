@@ -1,5 +1,6 @@
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
 /**
  * _strspn - gets the length of a prefix substring
  * @s: pointer to the string to be scanned
@@ -14,16 +15,18 @@ int i, j;
 int counter = 0;
 int len_s = strlen(s);
 int len_accept = strlen(accept);
-for (i = 0; i < len_accept; i++)
+for (i = 0; i < len_s; i++)
 {
-for (j = 0; j <= len_s; j++)
+for (j = 0; j < len_accept; j++)
 {
-if (*(s + j) == *(accept + i))
+if (*(s + i) == *(accept + j))
 {
 counter++;
 break;
 }
 }
+if (j == len_accept)
+break;
 }
 return (counter);
 }
