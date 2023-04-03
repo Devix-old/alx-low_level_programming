@@ -13,6 +13,9 @@ for (j = 0; j < 8; j++)
 {
 printf("%c", a[i][j]);
 }
+if (i != 8)
+{
 printf("\n");
+}
 }
 }
