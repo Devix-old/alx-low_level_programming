@@ -1,3 +1,4 @@
+#include <string.h>
 /**
  * _strstr - finds the first occurrence of a substring in a string
  * @haystack: pointer to the string to search in
