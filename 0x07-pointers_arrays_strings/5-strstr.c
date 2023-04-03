@@ -7,13 +7,14 @@
  * Return: A pointer to the beginning of the located substring,
  *         or NULL if the substring is not found.
  */
-char *_strstr(char *haystack, char *needle){
+char *_strstr(char *haystack, char *needle)
+{
 int i, j;
 int len_haystack = strlen(haystack);
 int len_needle = strlen(needle);
 if (len_needle == 0)
 {
-return haystack;
+return (haystack);
 }
 for (i = 0; i < len_haystack; i++)
 {
