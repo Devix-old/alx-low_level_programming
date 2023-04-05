@@ -1,4 +1,6 @@
 #include <string.h>
+#include <stdio.h>
+
 /**
  * helper - Checks if a string is a palindrome recursively
  *
@@ -7,16 +9,34 @@
  *
  * Return: 1 if palindrome, 0 if not
  */
+
 int helper(char *s, int i)
 {
-int len = strlen(s);
-if (i >= len)
+    int len = strlen(s);
+
+    if (i >= len)
+    {
+        return 1;
+    }
+
+    if (s[i] != s[len - 1 - i])
+    {
+        return 0;
+    }
+
+    return helper(s, i + 1);
+}
+
+/**
+ * is_palindrome - Checks if a string is a palindrome
+ *
+ * @s: String to check
+ *
+ * Return: 1 if palindrome, 0 if not
+ */
+
+int is_palindrome(char *s)
 {
-return 1;
+    return helper(s, 0);
 }
-if (s[i] != s[len - 1 - i])
-{
-return 0;
-}
-return helper(s, i + 1);
-}
+
