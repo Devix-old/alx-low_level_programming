@@ -12,21 +12,17 @@
 
 int helper(char *s, int i)
 {
-    int len = strlen(s);
-
-    if (i >= len)
-    {
-        return 1;
-    }
-
-    if (s[i] != s[len - 1 - i])
-    {
-        return 0;
-    }
-
-    return helper(s, i + 1);
+int len = strlen(s);
+if (i >= len)
+{
+return 1;
 }
-
+if (s[i] != s[len - 1 - i])
+{
+return 0;
+}
+return helper(s, i + 1);
+}
 /**
  * is_palindrome - Checks if a string is a palindrome
  *
@@ -34,9 +30,8 @@ int helper(char *s, int i)
  *
  * Return: 1 if palindrome, 0 if not
  */
-
 int is_palindrome(char *s)
 {
-    return helper(s, 0);
+return helper(s, 0);
 }
 
