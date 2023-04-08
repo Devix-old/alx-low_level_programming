@@ -10,11 +10,13 @@
 int main(int argc, char *argv[])
 {
 int coins = 0;
-int i;
+int i,cent;
 int t_coins[] = {25, 10, 5, 2, 1};
-int cent = atoi(argv[1]);
-if (argc != 2 || argc ==1)
+if (argc == 2 )
 {
+cent = atoi(argv[1]);
+}
+else{
 printf("Error\n");
 return (1);
 }
