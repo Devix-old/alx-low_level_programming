@@ -33,6 +33,6 @@ coins++;
 }
 }
 }
-printf("%d", coins);
+printf("%d\n", coins);
 return (0);
 }
