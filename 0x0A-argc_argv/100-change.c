@@ -32,7 +32,7 @@ cent = cent - t_coins[i];
 coins++;
 }
 }
-printf("%d", coins);
 }
+printf("%d", coins);
 return (0);
 }
