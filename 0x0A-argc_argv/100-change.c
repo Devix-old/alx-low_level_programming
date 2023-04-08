@@ -13,14 +13,14 @@ int coins = 0;
 int i;
 int t_coins[] = {25, 10, 5, 2, 1};
 int cent = atoi(argv[1]);
-if (argc != 2)
+if (argc != 2 || argc ==1)
 {
 printf("Error\n");
 return (1);
 }
 if (cent < 0)
 {
-printf("0\n");
+printf("%d\n",0);
 }
 else
 {
