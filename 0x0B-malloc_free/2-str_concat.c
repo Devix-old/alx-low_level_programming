@@ -31,7 +31,7 @@ if (concat == NULL)
 {
 return(NULL);
 }
-i = 0
+i = 0;
 if (s1 != NULL)
 {
 while (s1[i] != '\0')
