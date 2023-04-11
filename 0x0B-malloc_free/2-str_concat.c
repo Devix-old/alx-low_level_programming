@@ -1,68 +1,37 @@
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * str_concat - Concatenates two strings
- * @s1: First string to concatenate
- * @s2: Second string to concatenate
+ * str_concat - concatenates two strings
+ * @s1: the first string
+ * @s2: the second string
  *
- * Return: A pointer to the newly allocated space in memory containing the
- * concatenated string, or NULL if an error occurred
+ * Return: a pointer to a newly allocated space in memory which contains the
+ * contents of s1, followed by the contents of s2, and null terminated.
+ * NULL on failure.
  */
 char *str_concat(char *s1, char *s2)
 {
-        int len = 0, i = 0, j = 0;
-        char *concat;
+	char *concat;
+	int i, j, len1 = 0, len2 = 0;
 
-        if (s1 == NULL && s2 == NULL)
-                return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-        if (s1 != NULL)
-        {
-                while (s1[i] != '\0')
-                {
-                        len++;
-                        i++;
-                }
-        }
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
 
-        i = 0;
-        if (s2 != NULL)
-        {
-                while (s2[i] != '\0')
-                {
-                        len++;
-                        i++;
-                }
-        }
+	concat = malloc((len1 + len2 + 1) * sizeof(char));
+	if (concat == NULL)
+		return (NULL);
 
-        concat = malloc(sizeof(char) * (len + 1));
-        if (concat == NULL)
-                return (NULL);
+	for (i = 0; i < len1; i++)
+		concat[i] = s1[i];
+	for (j = 0; j <= len2; j++)
+		concat[i + j] = s2[j];
 
-        i = 0;
-        if (s1 != NULL)
-        {
-                while (s1[i] != '\0')
-                {
-                        concat[j] = s1[i];
-                        i++;
-                        j++;
-                }
-        }
-
-        i = 0;
-        if (s2 != NULL)
-        {
-                while (s2[i] != '\0')
-                {
-                        concat[j] = s2[i];
-                        i++;
-                        j++;
-                }
-        }
-
-        concat[j] = '\0';
-        return (concat);
+	return (concat);
 }
