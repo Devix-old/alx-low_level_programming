@@ -28,9 +28,9 @@ if (tab[i] == NULL)
 {
 for (j = 0; j < i; j++)
 {
-free (tab[j]);
+free(tab[j]);
 }
-free (tab);
+free(tab);
 return (NULL);
 }
 }
