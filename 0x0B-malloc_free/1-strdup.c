@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 char *_strdup(char *str)
-{
+{   int i;
     char *str_copy;
     int len = strlen(str);
     str_copy = malloc(sizeof(char) * (len + 1));
@@ -12,7 +12,7 @@ char *_strdup(char *str)
         return (NULL);
     }
 
-    for (int i = 0; i <= len; i++)
+    for (i = 0; i <= len; i++)
     {
         str_copy[i] = str[i];
     }
