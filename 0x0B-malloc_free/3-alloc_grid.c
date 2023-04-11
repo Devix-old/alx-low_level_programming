@@ -26,6 +26,11 @@ for (i = 0; i < height; i++)
 tab[i] = malloc(sizeof(int) * width);
 if (tab[i] == NULL)
 {
+for (j = 0; j < i; j++)
+{
+free (tab[j]);
+}
+free (tab);
 return (NULL);
 }
 }
@@ -36,10 +41,5 @@ for (j = 0; j < width; j++)
 tab[i][j] = 0;
 }
 }
-for (i = 0; i < height; i++)
-{
-free(tab[i]);
-}
-free(tab);
 return (tab);
 }
