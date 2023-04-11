@@ -12,13 +12,13 @@ char *_strdup(char *str)
 char *dup;
 if (str == NULL)
 {
-return NULL;
+return (NULL);
 }
 dup = malloc(strlen(str) + 1);
 if (dup == NULL)
 {
-return NULL;
+return (NULL);
 }
 strcpy(dup, str);
-return dup;
+return (dup);
 }
