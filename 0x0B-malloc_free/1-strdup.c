@@ -14,10 +14,6 @@ int i;
 int len = strlen(str);
 char *str_copy;
 str_copy = malloc(sizeof(char) * len + 1);
-if (str_copy == NULL)
-{
-return (NULL);
-}
 for (i = 0; i < len; i++)
 {
 str_copy[i] = str[i];
