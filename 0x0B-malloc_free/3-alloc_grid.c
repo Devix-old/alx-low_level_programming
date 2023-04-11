@@ -36,5 +36,10 @@ for (j = 0; j < width; j++)
 tab[i][j] = 0;
 }
 }
+for (i = 0; i < height; i++)
+{
+free(tab[i]);
+}
+free(tab);
 return (tab);
 }
