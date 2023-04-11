@@ -1,3 +1,6 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 char *str_concat(char *s1, char *s2)
 {
 int len = 0, i = 0, j = 0;
