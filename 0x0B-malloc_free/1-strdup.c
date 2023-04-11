@@ -9,25 +9,14 @@
  */
 char *_strdup(char *str)
 {
-char *str_copy;
-int i = 0, len;
-if (str == NULL)
-{
-return (NULL);
+char *dup;
+if (str == NULL) {
+return NULL;
 }
-while (str[i])
-{
-len++;
+dup = malloc(strlen(str) + 1);
+if (dup == NULL) {
+return NULL;
 }
-str_copy = malloc(sizeof(char) * (len + 1));
-if (str_copy == NULL)
-{
-return (NULL);
-}
-for (i = 0; i < len; i++)
-{
-str_copy[i] = str[i];
-}
-str_copy[len] = '\0';
-return (str_copy);
+strcpy(dup, str);
+    return dup;
 }
