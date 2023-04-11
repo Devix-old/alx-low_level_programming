@@ -38,7 +38,7 @@ i++;
 j++;
 }
 }
-i = 0; // reset i to zero
+i = 0;
 if (s2 != NULL)
 {
 while (s2[i] != '\0')
