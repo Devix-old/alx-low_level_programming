@@ -22,7 +22,7 @@ for (i = 0; i < ac; i++)
 {
 total_len = strlen(av[i]) + total_len + 1;
 }
-tab = malloc(total_len * sizeof(char));
+tab = malloc(total_len *sizeof(char));
 if (tab == NULL)
 {
 free(tab);
