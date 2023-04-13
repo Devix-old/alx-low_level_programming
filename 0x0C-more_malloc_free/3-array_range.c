@@ -14,7 +14,7 @@ int len, *tab, i;
 if (min > max)
 return (NULL);
 len = max - min;
-tab = malloc((len * sizeof(int)) + 1);
+tab = malloc((len *sizeof(int)) + 1);
 if (tab == NULL)
 return (NULL);
 for (i = 0; i <= len; i++)
