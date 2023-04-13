@@ -24,7 +24,7 @@ len2 = strlen(s2);
 if (n >= len2)
 n = len2;
 concat_len = len1 + n + 1;
-concat = malloc(concat_len * sizeof(char));
+concat = malloc(concat_len *sizeof(char));
 if (concat == NULL)
 return (NULL);
 memcpy(concat, s1, len1);
