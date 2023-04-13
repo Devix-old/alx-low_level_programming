@@ -14,7 +14,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 char *tab;
 int len_s1, len_s2;
 len_s1 = strlen(s1);
+if (n > strlen(s2))
+{
+len_s2 = strlen(s2);
+}
+else
+{
 len_s2 = strnlen(s2, n);
+}
 if (s1 == NULL)
 {
 s1 = "";
@@ -23,7 +30,8 @@ if (s2 == NULL)
 {
 s2 = "";
 }
-tab = malloc((len_s1 + n + 1) * sizeof(char));
+
+tab = malloc((len_s1 + len_s2 + 1) * sizeof(char));
 if (tab == NULL)
 {
 return (NULL);
