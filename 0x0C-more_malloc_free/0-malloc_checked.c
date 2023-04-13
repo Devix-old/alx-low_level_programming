@@ -13,7 +13,8 @@
  */
 void *malloc_checked(unsigned int b)
 {
-void *tab = malloc(b);
+void *tab;
+tab = malloc(b);
 if (tab == NULL)
 {
 exit(98);
