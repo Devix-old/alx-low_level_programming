@@ -9,27 +9,20 @@
  */
 int *array_range(int min, int max)
 {
-    int *arr;
-    int i, len;
-
-    /* If min > max, return NULL */
-    if (min > max)
-        return (NULL);
-
-    /* calculate the length of the array */
-    len = max - min + 1;
-
-    /* allocate memory for the array */
-    arr = malloc(sizeof(int) * len);
-
-    /* If malloc fails, return NULL */
-    if (arr == NULL)
-        return (NULL);
-
-    /* populate the array with values from min to max */
-    for (i = 0; i < len; i++)
-        arr[i] = min + i;
-
-    /* return a pointer to the newly created array */
-    return (arr);
+int *arr;
+int i, len;
+if (min > max){
+return (NULL);
+}
+len = max - min + 1;
+arr = malloc(sizeof(int) * len);
+if (arr == NULL)
+{
+return (NULL);
+}
+for (i = 0; i < len; i++)
+{
+arr[i] = min + i;
+}
+return (arr);
 }
