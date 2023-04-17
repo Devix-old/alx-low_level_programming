@@ -15,7 +15,7 @@ dog_t *my_dog;
 my_dog = malloc(sizeof(new_dog));
 if (my_dog == NULL)
 {
-    return (NULL);
+return (NULL);
 }
 my_dog->name = name;
 my_dog->age = age;
