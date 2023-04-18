@@ -16,18 +16,19 @@ char *name_copy, *owner_copy;
 dog_t *my_dog;
 len_owner = strlen(owner);
 len_name = strlen(name);
-my_dog = malloc(sizeof(new_dog));
+my_dog = malloc(sizeof(my_dog));
+i=0;
 if (my_dog == NULL)
 {
 return (NULL);
 }
-name_copy = malloc(sizeof(char) * len_name);
+name_copy = malloc(sizeof(char) * (len_name + 1));
 if (name_copy == NULL)
 {
 free(my_dog);
 return (NULL);
 }
-owner_copy = malloc(sizeof(char) * len_owner);
+owner_copy = malloc(sizeof(char) * (len_owner + 1));
 if (owner_copy == NULL)
 {
 free(name_copy);
