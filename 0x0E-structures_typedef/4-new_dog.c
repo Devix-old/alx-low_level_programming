@@ -6,18 +6,16 @@
  * @name: Name of the dog
  * @age: Age of the dog
  * @owner: Owner of the dog
- *
  * Return: Pointer to the newly created dog_t structure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int len_name, len_owner, i;
+int len_name, len_owner;
 char *name_copy, *owner_copy;
 dog_t *my_dog;
 len_owner = strlen(owner);
 len_name = strlen(name);
 my_dog = malloc(sizeof(my_dog));
-i = 0;
 if (my_dog == NULL)
 {
 return (NULL);
@@ -35,19 +33,10 @@ free(name_copy);
 free(my_dog);
 return (NULL);
 }
-while (name[i] != '\0')
-{
-name_copy[i] = name[i];
-i++;
-}
-name_copy[i] = '\0';
-i = 0;
-while (owner[i] != '\0')
-{
-owner_copy[i] = owner[i];
-i++;
-}
-owner_copy[i] = '\0';
+strcpy(name_copy, name);
+name_copy[len_name] = '\0';
+strcpy(owner_copy, owner);
+owner_copy[len_owner] = '\0';
 my_dog->name = name_copy;
 my_dog->owner = owner_copy;
 my_dog->age = age;
