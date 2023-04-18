@@ -15,7 +15,8 @@ char *name_copy, *owner_copy;
 dog_t *my_dog;
 len_owner = strlen(owner);
 len_name = strlen(name);
-if (name == NULL || owner == NULL){
+if (name == NULL || owner == NULL)
+{
 return (NULL);
 }
 my_dog = malloc(sizeof(my_dog));
