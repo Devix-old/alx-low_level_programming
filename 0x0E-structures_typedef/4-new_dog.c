@@ -17,7 +17,7 @@ dog_t *my_dog;
 len_owner = strlen(owner);
 len_name = strlen(name);
 my_dog = malloc(sizeof(my_dog));
-i=0;
+i = 0;
 if (my_dog == NULL)
 {
 return (NULL);
