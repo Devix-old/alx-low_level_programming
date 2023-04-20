@@ -1,5 +1,15 @@
 #include <stdio.h>
 #include <stdarg.h>
+/**
+ * print_all - prints anything based on format specified
+ * @format: format string containing types of arguments
+ *		c: char
+ *		i: integer
+ *		f: float
+ *		s: char* (if the string is NULL, print (nil) instead
+ *		any other char should be ignored
+ * Return: void
+ */
 void print_all(const char * const format, ...)
 {
 int i = 0;
@@ -8,7 +18,8 @@ char *s;
 va_start(args, format);
 while (format[i] != '\0')
 {
-switch (format[i]) {
+switch (format[i])
+{
 case 'c':
 printf("%c", va_arg(args, int));
 break;
@@ -28,7 +39,8 @@ default:
 i++;
 continue;
 }
-if (format[i + 1] != '\0') {
+if (format[i + 1] != '\0')
+{
 printf(", ");
 }
 i++;
