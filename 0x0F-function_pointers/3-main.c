@@ -21,7 +21,7 @@ exit(98);
 p = get_op_func(argv[2]);
 if (p == NULL)
 {
-printf("Erreur");
+printf("Erreur\n");
 exit(99);
 }
 num1 = atoi(argv[1]);
