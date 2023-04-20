@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 int num1, num2, result;
 if (argc > 4)
 {
-printf("erreur");
+printf("Erreur\n");
+return (98);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
