@@ -12,14 +12,21 @@
 int main(int argc, char *argv[])
 {
 int num1, num2, result;
+int (*p)(int, int);
 if (argc > 4 || argc < 4)
 {
 printf("Erreur\n");
-exit (98);
+exit(98);
+}
+p = get_op_func(argv[2]);
+if (p == NULL)
+{
+printf("Erreur");
+exit(99);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
-result = get_op_func(argv[2])(num1, num2);
+result = p(num1, num2);
 printf("%d\n", result);
 return (0);
 }
