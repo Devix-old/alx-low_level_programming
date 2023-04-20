@@ -1,30 +1,38 @@
-#include "3-calc.h"
 #include <stddef.h>
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
+
 /**
- * get_op_func - selects the appropriate function to perform the operation
- * @s: operator passed as argument
+ * main - Entry point for the program
+ * @argc: Number of arguments passed to the program
+ * @argv: Array of arguments passed to the program
  *
- * Return: pointer to the function that performs the operation
+ * Return: Always 0 (Success)
  */
-int (*get_op_func(char *s))(int, int)
+int main(int argc, char *argv[])
 {
-op_t ops[] = {
-{"+", op_add},
-{"-", op_sub},
-{"*", op_mul},
-{"/", op_div},
-{"%", op_mod},
-{NULL, NULL}
-};
-int i = 0;
-while (i < 5)
+int num1, num2, result;
+int (*operation)(int, int);
+if (argc != 4)
 {
-if (strcmp(ops[i].op, s) == 0)
-{
-return (*(ops[i]).f);
+printf("Error\n");
+exit(98);
 }
-i++;
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
+operation = get_op_func(argv[2]);
+if (operation == NULL || argv[2][1] != '\0')
+{
+printf("Error\n");
+exit(99);
 }
-return (NULL);
+if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
+{
+printf("Error\n");
+exit(100);
+}
+result = operation(num1, num2);
+printf("%d\n", result);
+return (0);
 }
