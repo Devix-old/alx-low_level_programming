@@ -2,11 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
-
-
-int main(int argc, char *argv[]){
+/**
+ * main - Entry point for the program
+ * @argc: Number of arguments passed to the program
+ * @argv: Array of strings containing the arguments passed to the program
+ *
+ * Return: 0 on success
+ */
+int main(int argc, char *argv[])
+{
 int num1, num2, result;
-if(argc > 4)
+if (argc > 4)
 {
 printf("erreur");
 }
