@@ -2,31 +2,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+
 /**
  * main - Entry point for the program
  * @argc: Number of arguments passed to the program
- * @argv: Array of strings containing the arguments passed to the program
+ * @argv: Array of arguments passed to the program
  *
- * Return: 0 on success
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
 int num1, num2, result;
-int (*p)(int, int);
-if (argc > 4 || argc < 4)
+int (*operation)(int, int);
+if (argc != 4)
 {
-printf("Erreur\n");
+printf("Error\n");
 exit(98);
-}
-p = get_op_func(argv[2]);
-if (p == NULL)
-{
-printf("Erreur\n");
-exit(99);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
-result = p(num1, num2);
+operation = get_op_func(argv[2]);
+if (operation == NULL || argv[2][1] != '\0')
+{
+printf("Error\n");
+exit(99);
+}
+if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
+{
+printf("Error\n");
+exit(100);
+}
+result = operation(num1, num2);
 printf("%d\n", result);
 return (0);
 }
