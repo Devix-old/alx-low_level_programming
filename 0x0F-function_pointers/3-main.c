@@ -15,7 +15,7 @@ int num1, num2, result;
 if (argc > 4 || argc < 4)
 {
 printf("Erreur\n");
-return (98);
+exit (98);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
