@@ -6,7 +6,7 @@
  *
  * @head: Pointer to the head node of the linked list.
  *
- * Return: The data of the head node that was deleted, or 0 if the list is empty.
+ * Return: The data of the head node that was deleted, or 0 empty.
  */
 int pop_listint(listint_t **head)
 {
