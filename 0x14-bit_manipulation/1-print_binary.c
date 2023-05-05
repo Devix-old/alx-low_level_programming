@@ -7,6 +7,7 @@ void print_binary(unsigned long int n)
 {
 	int i = 31;
 	int first_one = 0;
+
 	if (n == 0)
 	{
 		_putchar('0');
