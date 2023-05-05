@@ -9,18 +9,18 @@ void print_binary(unsigned long int n)
 	int first_one = 0;
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return;
 	}
 	while (i >= 0)
 	{
 		if ((n >> i) & 1)
 		{
-			putchar('1');
+			_putchar('1');
 			first_one++;
 		}
 		else if (first_one)
-			putchar('0');
+			_putchar('0');
 		i--;
 	}
 }
