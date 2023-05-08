@@ -10,14 +10,14 @@
  */
 int cp_(const char *file_from, const char *file_to)
 {
-	int o, r;
-	int o_to, w_to, i = 0;
+	int o, r, c;
+	int o_to, w_to, i = 0, c_to;
 	char buf[1024];
 	mode_t filemode;
 
 	if (file_from == NULL || file_to == NULL)
 		return (0);
-	o = open(file_from, O_RDWR);
+	o = open(file_from, O_RDONLY);
 	r = read(o, buf, 1024);
 	while (buf[i])
 	{
@@ -28,7 +28,7 @@ int cp_(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	filemode = 0664;
+	filemode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	o_to = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, filemode);
 
 	w_to = write(o_to, buf, i - 1);
@@ -37,13 +37,14 @@ int cp_(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	if (close(o) == -1)
+	c = close(o);
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o);
 		exit(100);
 	}
-
-	if (close(o_to) == -1)
+	c_to = close(o_to);
+	if (c_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_to);
 		exit(100);
