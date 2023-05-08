@@ -23,7 +23,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		c = fgetc(file);
 		if (c != EOF)
 		{
-			write(1, &c, 1);
+			if (write(1, &c, 1) == -1)
+				return (0);
 			printed_char++;
 		}
 		letters--;
