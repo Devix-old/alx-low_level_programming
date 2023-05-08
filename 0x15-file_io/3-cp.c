@@ -23,7 +23,7 @@ int cp_(const char *file_from, const char *file_to)
 	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		return (-1);
+		exit(98);
 	}
 
 	filemode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -32,7 +32,7 @@ int cp_(const char *file_from, const char *file_to)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		close(o);
-		return (-1);
+		exit(99);
 	}
 
 	while ((r = read(o, buf, 1024)) > 0)
@@ -44,7 +44,7 @@ int cp_(const char *file_from, const char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(o);
 			close(o_to);
-			return (-1);
+			exit(100);
 		}
 	}
 
