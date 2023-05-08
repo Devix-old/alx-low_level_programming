@@ -10,22 +10,17 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, len;
+	int o, len;
 	mode_t filemode;
 
 	if (filename == NULL)
 		return (-1);
+
 	len = strlen(text_content);
 	filemode = S_IRUSR | S_IWUSR;
-	o = open(filename, O_WRONLY | O_CREAT, filemode);
-	w = write(o, text_content, len);
+	o = open(filename, O_WRONLY | O_CREAT | O_TRUNC, filemode);
+	write(o, text_content, len);
 
-	if (o == -1 || w == -1)
-		return (-1);
-	if (open(filename, O_EXCL) == -1)
-	{
-		truncate(filename, w);
-	}
-	return (1);
 	close(o);
+	return (1);
 }
