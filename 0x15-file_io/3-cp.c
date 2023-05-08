@@ -30,7 +30,7 @@ int cp_(const char *file_from, const char *file_to)
 	o_to = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, filemode);
 	if (o_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s: %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		close(o);
 		return (-1);
 	}
@@ -67,7 +67,7 @@ int cp_(const char *file_from, const char *file_to)
 	c = close(o_to);
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d: %s\n", o_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_to);
 		return (-1);
 	}
 
