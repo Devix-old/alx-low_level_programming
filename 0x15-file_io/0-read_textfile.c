@@ -9,8 +9,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	int fd;
-	int len_r, len_w;
+	int len_r, len_w, fd;
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
@@ -27,7 +26,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (len_r == -1 || len_w == -1 || len_r != len_w)
 	{
 		free(buf);
-		close(fd);
 		return (0);
 	}
 
