@@ -13,6 +13,7 @@ int cp_(const char *file_from, const char *file_to)
 	int o, r;
 	int o_to, w_to, i = 0;
 	char buf[1024];
+
 	if (file_from == NULL || file_to == NULL)
 		return (0);
 	o = open(file_from, O_RDWR);
