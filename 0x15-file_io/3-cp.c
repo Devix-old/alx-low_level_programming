@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <sys/stat.h>
 /**
  * cp_ - Copies the content of one file to another
  * @file_from: Pointer to the file to copy from
@@ -13,6 +13,7 @@ int cp_(const char *file_from, const char *file_to)
 	int o, r;
 	int o_to, w_to, i = 0;
 	char buf[1024];
+	mode_t filemode;
 
 	if (file_from == NULL || file_to == NULL)
 		return (0);
@@ -27,8 +28,8 @@ int cp_(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-
-	o_to = open(file_to, O_WRONLY | O_TRUNC);
+	filemode = 0664;
+	o_to = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, filemode);
 
 	w_to = write(o_to, buf, i - 1);
 	if (o_to == -1 || w_to == -1)
