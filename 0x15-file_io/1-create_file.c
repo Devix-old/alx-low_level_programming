@@ -10,7 +10,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, len;
+	int o, w, len;
 	mode_t filemode;
 
 	if (filename == NULL)
@@ -19,7 +19,13 @@ int create_file(const char *filename, char *text_content)
 	len = strlen(text_content);
 	filemode = S_IRUSR | S_IWUSR;
 	o = open(filename, O_WRONLY | O_CREAT | O_TRUNC, filemode);
-	write(o, text_content, len);
+	w = write(o, text_content, len);
+
+	if (o == -1 || w == -1)
+	{
+		close(o);
+		return (-1);
+	}
 
 	close(o);
 	return (1);
