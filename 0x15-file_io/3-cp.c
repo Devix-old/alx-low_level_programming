@@ -22,7 +22,7 @@ int cp_(const char *file_from, const char *file_to)
 	o = open(file_from, O_RDONLY);
 	if (o == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s: %s\n", file_from, strerror(errno));
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		return (-1);
 	}
 
@@ -30,7 +30,7 @@ int cp_(const char *file_from, const char *file_to)
 	o_to = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, filemode);
 	if (o_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s: %s\n", file_to, strerror(errno));
+		dprintf(STDERR_FILENO, "Error: Can't write to %s: %s\n", file_to);
 		close(o);
 		return (-1);
 	}
@@ -41,7 +41,7 @@ int cp_(const char *file_from, const char *file_to)
 		w_to = write(o_to, buf, size);
 		if (w_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s: %s\n", file_to, strerror(errno));
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(o);
 			close(o_to);
 			return (-1);
@@ -50,7 +50,7 @@ int cp_(const char *file_from, const char *file_to)
 
 	if (r == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s: %s\n", file_from, strerror(errno));
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		close(o);
 		close(o_to);
 		return (-1);
@@ -59,7 +59,7 @@ int cp_(const char *file_from, const char *file_to)
 	c = close(o);
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d: %s\n", o, strerror(errno));
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o);
 		close(o_to);
 		return (-1);
 	}
@@ -67,7 +67,7 @@ int cp_(const char *file_from, const char *file_to)
 	c = close(o_to);
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d: %s\n", o_to, strerror(errno));
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d: %s\n", o_to);
 		return (-1);
 	}
 
