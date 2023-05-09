@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	len = strlen(text_content);
 	filemode = S_IRUSR | S_IWUSR;
 	o = open(filename, O_WRONLY | O_CREAT | O_TRUNC, filemode);
-	w = write(o, text_content, len - 1);
+	w = write(o, text_content, len);
 
 	if (o == -1 || w == -1)
 	{
