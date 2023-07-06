@@ -5,7 +5,8 @@ unsigned int binary_to_uint(const char *b)
 	int i = 1;
 	unsigned int dec = 0;
 	int len_b = strlen(b) - 1;
-
+	if (b == NULL)
+		return (0);
 	while (len_b >= 0)
 	{
 		if (b[len_b] == '1')
