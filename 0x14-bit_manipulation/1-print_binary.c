@@ -7,7 +7,7 @@ void print_binary(unsigned long int n)
 {
 
 	unsigned long int current;
-	int i = 31;
+	int i = 63;
 	int count = 0;
 
 	while (i >= 0)
