@@ -21,19 +21,39 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	o = open(filename, O_RDONLY);
 	if (o == -1)
+	{
+		close(o);
+		free(buf);
 		return (0);
+	}
 	r = read(o, buf, letters);
 	if (r == -1)
+	{
+		close(o);
+		free(buf);
 		return (0);
+	}
 	w = write(0, buf, strlen(buf));
 	if (w == -1)
+	{
+		close(o);
+		free(buf);
 		return (0);
+	}
 
 	if (w != r)
+	{
+		close(o);
+		free(buf);
 		return (0);
+	}
 	c = close(o);
 	if (c == -1)
+	{
+		close(o);
+		free(buf);
 		return (0);
+	}
 
 	free(buf);
 	return (w);
