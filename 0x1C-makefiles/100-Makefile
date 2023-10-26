@@ -5,19 +5,23 @@ NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+# Makefile Rules
+.PHONY: all clean oclean fclean re
+
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(SRC:.c=.o)
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) $(OBJ) $(NAME) *~ \#*
+	$(RM) *~ $(NAME) $(SRC:.c=.o)
 
 oclean:
-	$(RM) $(OBJ)
+	$(RM) $(SRC:.c=.o)
 
-fclean: clean oclean
+fclean: clean
 
 re: fclean all
 
-.PHONY: all clean oclean fclean re5
+# Ensure that the Makefile doesn't compile without m.h
+$(SRC): m.h
