@@ -34,9 +34,10 @@
     "**/.vscode/**"
   ],
   "C_Cpp_Runner.useAddressSanitizer": false,
-"C_Cpp_Runner.showCompilationTime": false,
-"files.associations": {
+  "C_Cpp_Runner.showCompilationTime": false,
+  "files.associations": {
 	"stdio.h": "c",
-	"search_algos.h": "c"
+	"search_algos.h": "c",
+	"stdlib.h": "c"
 }
 }
