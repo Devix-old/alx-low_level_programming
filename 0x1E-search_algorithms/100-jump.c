@@ -1,7 +1,6 @@
 #include "search_algos.h"
 #include <math.h>
-#include "search_algos.h"
-#include <stdbool.h>
+#include <stdio.h>
 
 /**
  * jump_search - Jump search algorithm
@@ -18,21 +17,21 @@ int jump_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	while (array[r] < value && r < size)
+	while (r < size && array[r] < value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", r, array[r]);
 		r += square;
 	}
+
 	l = r - square;
 	printf("Value found between indexes [%ld] and [%ld]\n", l, r);
-	for (; l <= r; l++)
+
+	for (; l <= r && l < size; l++)
 	{
-		if (r <= size)
-		{
-			printf("Value checked array[%ld] = [%d]\n", l, array[l]);
-		}
+		printf("Value checked array[%ld] = [%d]\n", l, array[l]);
 		if (array[l] == value)
-			return ((int)l);
+			return (l);
 	}
+
 	return (-1);
 }
