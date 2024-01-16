@@ -18,18 +18,18 @@ void print_array(int *array, int L, int R)
 	{
 		printf("%d", array[i]);
 		if (i < R)
-			printf(" ");
+			printf(", ");
 	}
 	printf("\n");
 }
 
 /**
- * binary_search - Function that search for a value inside an array using
- * Binary search
- * @array: Pointer to the first element of the array to search in
- * @size: The size of the array
- * @value: The searched value
- * Return: return the value searched
+ * binary_search - Searches for a value inside an array using Binary search.
+ * @array: Pointer to the first element of the array to search in.
+ * @size: The size of the array.
+ * @value: The searched value.
+ *
+ * Return: Index of the value in the array; -1 if not found.
  */
 int binary_search(int *array, size_t size, int value)
 {
@@ -37,10 +37,12 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	while (R >= L)
+
+	while (L <= R)
 	{
 		print_array(array, L, R);
 		M = (R + L) / 2;
+
 		if (array[M] == value)
 			return (M);
 		if (value > array[M])
@@ -48,5 +50,6 @@ int binary_search(int *array, size_t size, int value)
 		else
 			R = M - 1;
 	}
+
 	return (-1);
 }
