@@ -1,4 +1,28 @@
 #include "search_algos.h"
+
+/**
+ * print_array - Prints elements of an array within a given range.
+ * @array: Pointer to the array.
+ * @L: Left index of the range.
+ * @R: Right index of the range.
+ *
+ * Description: This function prints the elements of the array within
+ * the specified range [L, R].
+ */
+void print_array(int *array, int L, int R)
+{
+	int i;
+
+	printf("Searching in array: ");
+	for (i = L; i <= R; i++)
+	{
+		printf("%d", array[i]);
+		if (i < R)
+			printf(" ");
+	}
+	printf("\n");
+}
+
 /**
  * binary_search - Function that search for a value inside an array using
  * Binary search
@@ -6,7 +30,7 @@
  * @size: The size of the array
  * @value: The searched value
  * Return: return the value searched
-*/
+ */
 int binary_search(int *array, size_t size, int value)
 {
 	int L = 0, R = size - 1, M;
